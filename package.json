@@ -1,0 +1,13 @@
+{
+  "name": "blockchain-medical-records",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost"
+  },
+  "devDependencies": {"@nomicfoundation/hardhat-toolbox": "^5.0.0", "concurrently": "^9.1.0", "hardhat": "^2.22.18"}
+}
